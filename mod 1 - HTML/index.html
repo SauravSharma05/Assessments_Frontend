@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="shortcut icon" href="images/icon.jpg" type="image/x-icon">
+    <!-- external css link here  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2><a href="#">Student Registration Form</a></h2>
+    <!-- form box starts here -->
+    <div class="formbox">  
+        <form action="" method="get">
+        <div class="forma">
+            <p>First Name  : </p><input class="inp1" required type="text" name="fname" placeholder="Enter your first name" minlength="3" maxlength="6" id=""> 
+        </div>         
+        <div class="forma">
+            <p>Last Name  : </p><input type="text" class="inp1" minlength="3" required maxlength="6" name="lname" placeholder="Enter your last name" id=""> 
+        </div> 
+        <div class="forma">
+            <p>Email  : </p><input type="email" name="email" class="inp1" required placeholder="it should contain @..." id=""> 
+        </div> 
+        <div class="forma">
+            <p>Mobile  : </p><input type="tel" maxlength="10" minlength="10" required name="mobile" class="inp1" placeholder="only 10 digits are allowed" id=""> 
+        </div> 
+        <div class="genderr">
+            <p>Gender : </p>
+            <div class="gend">
+                <label for="male">Male </label><input type="radio" class="gen" name="Gender" id="male"> 
+                <label for="female">Female </label><input type="radio" class="gen" name="Gender" id="female"> 
+            </div>
+        </div> 
+        <div class="forma">
+            <p>Date oF Birth  : </p><input required type="date" name="dob" class="inp1" placeholder="mm/dd//yyyy" id=""> 
+        </div> 
+        <div class="forma">
+            <p>Address  : </p><textarea required name="" id="" cols="64" rows="10"></textarea> 
+        </div> 
+        <div class="forma">
+            <p>City  : </p><input required type="text" name="city" class="inp1"  id=""> 
+        </div> 
+        <div class="forma">
+            <p>Area PIN  : </p><input required type="number" name="pin" class="inp1"  id=""> 
+        </div> 
+        <div class="forma">
+            <p>State  : </p><input required type="text" name="state" class="inp1"  id=""> 
+        </div> 
+        <div class="genderr">
+            <p>Qualification : </p>
+            <div class="gend2"><select name="" id="">
+                <option value="">Select Qualification</option>
+            </select></div>
+        </div> 
+        <div class="genderr">
+            <p>Specialization : </p>
+            <div class="gend">
+                <div class="check">
+                    <input type="checkbox" name="CS" id=""><label>Computer Science</label><br>
+                    <input type="checkbox" name="CS" id=""><label>Information Technology</label><br>
+                    <input type="checkbox" name="CS" id=""><label>Computer Architecture</label><br>
+                    <input type="checkbox" name="CS" id=""><label>Tele Communication</label>
+                </div>
+            </div>
+        </div> 
+        <div class="forma">
+            <p>Password  : </p><input required type="password" name="state" class="inp1"  id=""> 
+        </div> 
+        <div class="forma">
+            <button type="submit">Registered</button> 
+        </div> 
+    </form>
+    </div>
+    <!-- form box ends here -->
+</body>
+</html>
