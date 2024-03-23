@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Assessment</title>
+
+    <!-- css -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .formbox{
+            margin: 50px auto;
+            width: 50%;
+            border: 2px solid black;
+        }
+        form{
+            padding: 10px;
+        }
+        .date{
+            display: none;
+        }
+        .time{
+            display: none;
+        }
+        .slot{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="formbox">
+
+        <form action="" method="post">
+            
+            <select name="day" id="day" >
+            <option value="full">Full day</option>
+            <option value="half">Half day</option>
+            <option value="hour">Hourly booking</option>
+        </select> <br>
+        <br> <hr> <br>
+        <input type="text" placeholder="enter your name" name="uname" id="uname"> <br> <br>
+        <input type="text" name="mobile" id="mobile" placeholder="enter mobile number"> <br> <br>
+        <input type="email" name="email" id="email" placeholder="enter your email"> <br> <br>
+        <input type="number" name="tperson" id="tperson" placeholder="total number of people">
+        
+        <br> <hr> <br>
+        <input class="date" type="date" name="date" id="date"> <br>
+        <input type="time" class="time" name="time" id="time"> <br>
+
+        <div class="slot">
+            <label for="breakfast">Breakfast : </label><input type="checkbox" name="breakfast" id="breakfast"> <br>
+            <label for="lunch">Lunch : </label><input type="checkbox" name="lunch" id="lunch"> <br>
+            <label for="dinner">Dinner : </label><input type="checkbox" name="dinner" id="dinner"> <br>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <button type="submit" id="btn">submit</button>
+    </form>
+    </div>
+
+    <script>
+
+
+            let btn = document.querySelector('#btn');
+             sb = document.querySelector('#day')
+
+             date = document.querySelector('#date')
+             slot = document.querySelector('.slot')
+             time = document.querySelector('#time')
+
+            btn.onclick = (event) => {
+                event.preventDefault();
+                
+                if (sb.value == "full") 
+                {
+                    date.style.display ="block";
+                }
+               else if(sb.value == "half")
+                {
+                    time.style.display ="block";
+                    date.style.display ="block";
+                    slot.style.display ="block";
+                }
+                else if(sb.value == "hour")
+                {
+                    date.style.display ="none";
+                    time.style.display ="block";
+                }
+             };
+    
+    </script>
+   
+</body>
+</html>
